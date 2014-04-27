@@ -19,7 +19,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## The cacheSolve method calls the solveMethod of the 
 ## R package to calculate its inverse. Once it obtains
-## its inverse it stores it.
+## its inverse it stores it. If the input matrix is
+## not modified then it retrieves the stored value of the
+## cache.
 
 cacheSolve <- function(x, ...) {
   m <- x$getinv()
